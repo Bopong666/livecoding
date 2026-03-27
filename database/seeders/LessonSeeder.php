@@ -15,12 +15,11 @@ class LessonSeeder extends Seeder
     {
         Course::all()->each(function ($course){
             $jumlahLesson = 10;
-
             for($i = 1; $i < $jumlahLesson; $i++ ){
                 Lessons::factory()->create([
                     'course_id' => $course->id,
                     'order' => 1,
-                    'judul' => "Lesson {$i}",
+                    'title' => "Lesson {$i}",
                 ]);
             }
         });
