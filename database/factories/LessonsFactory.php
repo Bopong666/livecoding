@@ -2,14 +2,13 @@
 
 namespace Database\Factories;
 
-use App\Models\Profile;
-use App\Models\User;
+use App\Models\Lessons;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends Factory<Profile>
+ * @extends Factory<Lessons>
  */
-class ProfileFactory extends Factory
+class LessonsFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -19,10 +18,7 @@ class ProfileFactory extends Factory
     public function definition(): array
     {
         return [
-             'user_id' => User::factory(),
-            'role' => 'user',            
-            'address' => fake()->address() ,
-            'phone_number' => '0000000',
+            //
         ];
     }
 }

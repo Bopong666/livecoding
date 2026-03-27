@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Course;
+use App\Models\Lessons;
 use Illuminate\Database\Seeder;
 
 class LessonSeeder extends Seeder
@@ -16,7 +17,7 @@ class LessonSeeder extends Seeder
             $jumlahLesson = 10;
 
             for($i = 1; $i < $jumlahLesson; $i++ ){
-                Lesson::factory()->create([
+                Lessons::factory()->create([
                     'course_id' => $course->id,
                     'order' => 1,
                     'judul' => "Lesson {$i}",
